@@ -1,7 +1,3 @@
-tap "homebrew/bundle"
-tap "homebrew/cask"
-tap "homebrew/cask-fonts"
-
 brew "git"
 brew "zsh"
 brew "direnv"
@@ -11,5 +7,5 @@ brew "zoxide"
 brew "starship"
 
 cask "kitty"
-# Optional fonts for pretty glyphs in prompts
+# Optional: pretty glyph fonts (uncomment to install)
 # cask "font-jetbrains-mono-nerd-font"
