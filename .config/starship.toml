@@ -1,0 +1,66 @@
+# Starship prompt configuration (Dracula-ish)
+add_newline = true
+
+format = "\n$directory$git_branch$git_status$nodejs$python$rust$golang$docker_context$time$cmd_duration\n$character"
+
+palette = "dracula"
+
+[palettes.dracula]
+fg     = "#f8f8f2"
+dim    = "#6272a4"
+purple = "#bd93f9"
+pink   = "#ff79c6"
+green  = "#50fa7b"
+yellow = "#f1fa8c"
+cyan   = "#8be9fd"
+orange = "#ffb86c"
+red    = "#ff5555"
+
+[character]
+success_symbol = "[❯](green)"
+error_symbol   = "[❯](red)"
+vicmd_symbol   = "[❮](purple)"
+
+[directory]
+style = "bold cyan"
+truncation_length = 3
+truncate_to_repo = true
+
+[git_branch]
+symbol = "git:"
+style = "purple"
+format = "[$symbol$branch]($style) "
+
+[git_status]
+style = "dim"
+format = "([$all_status$ahead_behind]($style)) "
+
+[nodejs]
+style = "green"
+format = "[$symbol$version]($style) "
+
+[python]
+style = "yellow"
+format = "[py:$version]($style) "
+
+[rust]
+style = "orange"
+format = "[rs:$version]($style) "
+
+[golang]
+style = "cyan"
+format = "[go:$version]($style) "
+
+[docker_context]
+style = "blue"
+format = "[docker:$context]($style) "
+
+[time]
+disabled = false
+format = "[$time]($style) "
+time_format = "%H:%M"
+style = "dim"
+
+[cmd_duration]
+format = "took [$duration]($style)"
+style = "yellow"
