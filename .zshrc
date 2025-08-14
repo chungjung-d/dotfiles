@@ -69,3 +69,13 @@ fi
 if command -v starship >/dev/null 2>&1; then
   eval "$(starship init zsh)"
 fi
+
+
+# Bat setting 
+cat() {
+  if [ -t 1 ]; then
+    command bat "$@"
+  else
+    command cat "$@"
+  fi
+}
